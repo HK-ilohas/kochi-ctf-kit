@@ -8,7 +8,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func getTeamData() echo.HandlerFunc {
+func GetTeamData() echo.HandlerFunc {
 	return func(c echo.Context) error {
 		username := c.FormValue("username")
 		password := c.FormValue("password")

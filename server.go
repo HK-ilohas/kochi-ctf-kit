@@ -4,6 +4,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 
+	"problemServer/api"
 	"problemServer/handler"
 )
 
@@ -19,5 +20,6 @@ func main() {
 	users.Use(middleware.JWT([]byte("secret")))
 	users.GET("/welcome", handler.Restricted()) // users/welcome
 
+	users.GET("/team", api.GetTeamData())
 	e.Logger.Fatal(e.Start(":1323"))
 }
