@@ -1,4 +1,4 @@
-module ownserver
+module problemServer
 go 1.16
 
 require (

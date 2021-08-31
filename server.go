@@ -4,7 +4,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 
-	"ownserver/handler"
+	"problemServer/handler"
 )
 
 func main() {
@@ -20,6 +20,4 @@ func main() {
 	users.GET("/welcome", handler.Restricted()) // users/welcome
 
 	e.Logger.Fatal(e.Start(":1323"))
-
-	e.GET("/api", api.getTeamData())
 }
